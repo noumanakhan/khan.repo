@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020617;
+  --background: #0d0d0d;
   --foreground: #f8fafc;
+  --accent: #ccef4d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
 }
 
 body {
@@ -24,16 +26,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #0d0d0d;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #252525;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #ccef4d;
 }
 
 /* Animation delay utilities */

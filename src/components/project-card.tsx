@@ -14,9 +14,8 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: true }}
       className="group h-full"
     >
       <div className="h-full rounded-2xl overflow-hidden border border-slate-700/50 bg-slate-800/40 backdrop-blur-xl hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-2xl hover:shadow-indigo-500/20 flex flex-col">

@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Nouman Khan - Full Stack Developer",
   description: "Full Stack Developer specializing in MERN stack, Next.js, and scalable web applications. Available for freelance and full-time opportunities.",
-  keywords: ["Full Stack Developer", "React", "Next.js", "Node.js", "MongoDB", "PostgreSQL", "Web Development"],
+  keywords: ["Full Stack AI Engineer", "FastAPI", "LLM RAG", "Agentic RAG", "LangChain", "pgvector", "Qdrant", "React", "Next.js", "Node.js", "Python", "Docker", "PostgreSQL", "MySQL", "Hostinger VPS"],
   authors: [{ name: "Nouman Khan" }],
   openGraph: {
     title: "Nouman Khan - Full Stack Developer",
@@ -37,7 +37,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="bg-slate-950 text-slate-50 min-h-screen flex flex-col">
+      <body className="bg-[#0d0d0d] text-slate-50 min-h-screen flex flex-col">
           <Navigation />
           <main className="flex-1 pt-16">{children}</main>
           <Footer />

@@ -11,7 +11,7 @@ export const projects: Project[] = [
     tech: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Tailwind CSS"],
     category: "fullstack",
     liveUrl: "https://complaint-system.example.com",
-    githubUrl: "https://github.com/noumanakhan1/complaint-system",
+    githubUrl: "https://github.com/noumanakhan/complaint-system",
     features: [
       "JWT authentication with bcrypt security",
       "Role-based access control (Student, Staff, Admin)",
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     tech: ["React", "Node.js", "PostgreSQL", "Prisma", "TypeScript", "Tailwind CSS"],
     category: "saas",
     liveUrl: "https://project-mgmt.example.com",
-    githubUrl: "https://github.com/noumanakhan1/project-management",
+    githubUrl: "https://github.com/noumanakhan/project-management",
     features: [
       "JWT authentication (access + refresh tokens)",
       "Kanban board with drag & drop functionality",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     image: "/projects/productivity-tool.jpg",
     tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS", "JWT"],
     category: "fullstack",
-    githubUrl: "https://github.com/noumanakhan1/productivity-tool",
+    githubUrl: "https://github.com/noumanakhan/productivity-tool",
     features: [
       "Task management system",
       "Secure password manager",
