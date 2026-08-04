@@ -16,4 +16,5 @@ export interface Project {
   demoUrl: string;
   images: string[];       // paths under /public, e.g. /projects/100xelevate/1.png
   feedback: FeedbackItem[];
+  credentials?: { login?: string; password: string }; // optional demo credentials
 }

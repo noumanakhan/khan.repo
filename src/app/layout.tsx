@@ -38,9 +38,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
       <body className="bg-[#0d0d0d] text-slate-50 min-h-screen flex flex-col">
-          <Navigation />
-          <main className="flex-1 pt-16">{children}</main>
-          <Footer />
+        <Navigation />
+        <main className="flex-1 pt-16">{children}</main>
+        <Footer />
       </body>
     </html>
   );

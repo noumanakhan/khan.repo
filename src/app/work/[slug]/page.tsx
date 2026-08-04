@@ -57,17 +57,33 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             </p>
           </div>
 
-          <div className="mt-6">
+          <div className="mt-6 flex flex-col gap-3">
             <a
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-[#ccef4d] px-6 py-3
-                         text-sm font-bold text-slate-950 shadow-lg shadow-[#ccef4d]/20 transition-all hover:bg-[#bce436] hover:shadow-[#ccef4d]/35"
+                         text-sm font-bold text-slate-950 shadow-lg shadow-[#ccef4d]/20 transition-all hover:bg-[#bce436] hover:shadow-[#ccef4d]/35 w-fit"
             >
               <span>Live Demo</span>
               <ExternalLink className="h-4 w-4" />
             </a>
+
+            {/* Demo Credentials */}
+            {project.credentials && (
+              <div className="flex flex-wrap gap-x-5 gap-y-1 font-mono text-xs text-slate-400">
+                {project.credentials.login && (
+                  <span>
+                    <span className="text-slate-500">login :</span>{" "}
+                    <span className="text-slate-200">{project.credentials.login}</span>
+                  </span>
+                )}
+                <span>
+                  <span className="text-slate-500">password :</span>{" "}
+                  <span className="text-slate-200">{project.credentials.password}</span>
+                </span>
+              </div>
+            )}
           </div>
 
           {/* Screenshot Carousel */}
@@ -79,29 +95,12 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             />
           </div>
 
-          {/* Project Details / Description */}
+          {/* Tech Stack — placed above About the Project */}
           <section className="mt-14 space-y-4 rounded-2xl border border-[#252525] bg-[#161616]/80 p-6 md:p-8">
-            <div className="flex items-center gap-2 border-b border-[#252525] pb-3">
-              <Layers className="h-4 w-4 text-[#ccef4d]" />
-              <h2 className="font-mono text-xs uppercase tracking-widest text-slate-400 font-bold">
-                About the Project
-              </h2>
-            </div>
-            <div className="space-y-4 pt-2">
-              {project.description.map((paragraph, i) => (
-                <p key={i} className="leading-relaxed text-slate-300 text-base">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          </section>
-
-          {/* Tech Stack */}
-          <section className="mt-8 space-y-4 rounded-2xl border border-[#252525] bg-[#161616]/80 p-6 md:p-8">
             <div className="flex items-center gap-2 border-b border-[#252525] pb-3">
               <Code className="h-4 w-4 text-[#ccef4d]" />
               <h2 className="font-mono text-xs uppercase tracking-widest text-slate-400 font-bold">
-                Technologies & Stack
+                Technologies &amp; Stack
               </h2>
             </div>
             <div className="flex flex-wrap gap-2 pt-2">
@@ -113,6 +112,44 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                   {tech}
                 </span>
               ))}
+            </div>
+          </section>
+
+          {/* Project Details / Description — below Tech Stack */}
+          <section className="mt-8 space-y-4 rounded-2xl border border-[#252525] bg-[#161616]/80 p-6 md:p-8">
+            <div className="flex items-center gap-2 border-b border-[#252525] pb-3">
+              <Layers className="h-4 w-4 text-[#ccef4d]" />
+              <h2 className="font-mono text-xs uppercase tracking-widest text-slate-400 font-bold">
+                About the Project
+              </h2>
+            </div>
+            <div className="space-y-4 pt-2">
+              {project.description.map((paragraph, i) => {
+                // Render the "Key Features" paragraph with proper bullet formatting
+                if (paragraph.startsWith("Key Features")) {
+                  const lines = paragraph.split("\n").filter(Boolean);
+                  const heading = lines[0];
+                  const bullets = lines.slice(1);
+                  return (
+                    <div key={i} className="pt-2">
+                      <p className="font-semibold text-slate-200 mb-2">{heading}</p>
+                      <ul className="space-y-1.5 pl-1">
+                        {bullets.map((bullet, j) => (
+                          <li key={j} className="flex items-start gap-2 text-slate-300 text-sm leading-relaxed">
+                            <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#ccef4d]" />
+                            <span>{bullet.replace(/^•\s*/, "")}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                }
+                return (
+                  <p key={i} className="leading-relaxed text-slate-300 text-base">
+                    {paragraph}
+                  </p>
+                );
+              })}
             </div>
           </section>
         </div>
