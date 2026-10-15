@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   description: "Full Stack Developer specializing in MERN stack, Next.js, and scalable web applications. Available for freelance and full-time opportunities.",
   keywords: ["Full Stack AI Engineer", "FastAPI", "LLM RAG", "Agentic RAG", "LangChain", "pgvector", "Qdrant", "React", "Next.js", "Node.js", "Python", "Docker", "PostgreSQL", "MySQL", "Hostinger VPS"],
   authors: [{ name: "Nouman Khan" }],
+  icons: {
+    icon: "/nk.png",
+    shortcut: "/nk.png",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "Nouman Khan - Full Stack Developer",
     description: "Full Stack Developer specializing in MERN stack, Next.js, and scalable web applications.",

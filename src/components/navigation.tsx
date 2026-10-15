@@ -33,11 +33,10 @@ export function Navigation() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
           style={{ maxWidth: "80rem" }} /* 80rem = max-w-7xl */
-          className={`pointer-events-auto w-full flex items-center justify-between px-6 py-2.5 rounded-full border transition-all duration-300 ${
-            scrolled
+          className={`pointer-events-auto w-full flex items-center justify-between px-6 py-2.5 rounded-full border transition-all duration-300 ${scrolled
               ? "bg-[#27322a]/98 backdrop-blur-2xl shadow-2xl shadow-black/25 border-[#4d5e52]/80"
               : "bg-[#27322a]/92 backdrop-blur-xl shadow-lg shadow-black/15 border-[#3a473e]/70"
-          }`}
+            }`}
         >
           {/* LEFT: Logo */}
           <motion.div
@@ -64,11 +63,10 @@ export function Navigation() {
                 >
                   <Link
                     href={item.href}
-                    className={`relative px-4 py-1.5 rounded-full text-sm font-medium transition-colors duration-200 ${
-                      isActive
+                    className={`relative px-4 py-1.5 rounded-full text-sm font-medium transition-colors duration-200 ${isActive
                         ? "text-white font-bold"
                         : "text-slate-300 hover:text-white"
-                    }`}
+                      }`}
                   >
                     {isActive && (
                       <motion.span
@@ -164,11 +162,10 @@ export function Navigation() {
                     >
                       <Link
                         href={item.href}
-                        className={`block w-full text-center py-2.5 px-4 rounded-xl text-sm font-medium transition-colors ${
-                          isActive
+                        className={`block w-full text-center py-2.5 px-4 rounded-xl text-sm font-medium transition-colors ${isActive
                             ? "text-white font-bold bg-[#3a473e]"
                             : "text-slate-200 hover:bg-[#3a473e]/60 hover:text-white"
-                        }`}
+                          }`}
                         onClick={() => setIsOpen(false)}
                       >
                         {item.label}
