@@ -73,12 +73,12 @@ const socials = [
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-[#f4f6f4] dark:bg-[#0d0d0d] text-[#090b09] dark:text-[#f8fafc] transition-colors duration-300">
+    <div className="min-h-screen bg-[#f4f6f4] text-[#090b09]">
       {/* Hero Section */}
-      <section className="pt-28 pb-16 bg-[#27322a] dark:bg-[#0d0d0d] border-b border-[#3a473e] dark:border-[#252525] text-white transition-colors duration-300 overflow-hidden relative">
+      <section className="pt-28 pb-16 bg-[#27322a] border-b border-[#3a473e] text-white overflow-hidden relative">
         {/* Ambient glow */}
         <motion.div
-          className="absolute top-0 right-1/3 w-80 h-80 bg-[#d9fea4] dark:bg-[#ccef4d] rounded-full mix-blend-screen filter blur-[120px] opacity-[0.08] dark:opacity-[0.05] pointer-events-none"
+          className="absolute top-0 right-1/3 w-80 h-80 bg-[#d9fea4] rounded-full mix-blend-screen filter blur-[120px] opacity-[0.08] pointer-events-none"
           animate={{ scale: [1, 1.15, 1] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -90,7 +90,7 @@ export default function Contact() {
             className="max-w-2xl relative z-10"
           >
             <motion.span
-              className="inline-block rounded-full bg-[#3a473e] dark:bg-[#ccef4d]/10 px-3.5 py-1 text-xs font-mono font-bold uppercase tracking-widest text-[#d9fea4] dark:text-[#ccef4d] border border-[#4d5e52] dark:border-[#ccef4d]/30 mb-4"
+              className="inline-block rounded-full bg-[#3a473e] px-3.5 py-1 text-xs font-mono font-bold uppercase tracking-widest text-[#d9fea4] border border-[#4d5e52] mb-4"
               whileHover={{ scale: 1.04 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
@@ -99,14 +99,14 @@ export default function Contact() {
             <h1 className="text-4xl sm:text-5xl font-extrabold mb-6 leading-tight text-white tracking-tight">
               Let's Build Something{" "}
               <motion.span
-                className="text-[#d9fea4] dark:text-[#ccef4d] inline-block"
+                className="text-[#d9fea4] inline-block"
                 animate={{ opacity: [0.85, 1, 0.85] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
                 Great Together
               </motion.span>
             </h1>
-            <p className="text-lg text-[#c5cec7] dark:text-slate-400 leading-relaxed">
+            <p className="text-lg text-[#c5cec7] leading-relaxed">
               Whether you have a project in mind, a question, or just want to
               connect — my inbox is always open. I typically respond within 24 hours.
             </p>
@@ -121,8 +121,8 @@ export default function Contact() {
 
             {/* Left — Contact Details */}
             <FadeUp>
-              <h2 className="text-2xl font-bold mb-2 text-[#090b09] dark:text-white">Get in Touch</h2>
-              <p className="text-[#525854] dark:text-slate-400 mb-10">
+              <h2 className="text-2xl font-bold mb-2 text-[#090b09]">Get in Touch</h2>
+              <p className="text-[#525854] mb-10">
                 Reach out through any of the channels below.
               </p>
 
@@ -139,23 +139,23 @@ export default function Contact() {
                       transition={{ duration: 0.45, delay: i * 0.1, ease: "easeOut" }}
                       whileHover={{ y: -3, scale: 1.015, boxShadow: "0 12px 32px rgba(217,254,164,0.15)" }}
                       whileTap={{ scale: 0.98 }}
-                      className="group flex items-center gap-5 p-5 rounded-2xl bg-white dark:bg-[#161616]/80 border border-[#e2e6e2] dark:border-[#252525] hover:border-[#27322a]/40 dark:hover:border-[#ccef4d]/50 hover:bg-white dark:hover:bg-[#161616] shadow-xs transition-colors duration-200"
+                      className="group flex items-center gap-5 p-5 rounded-2xl bg-white border border-[#e2e6e2] hover:border-[#27322a]/40 hover:bg-white shadow-xs transition-colors duration-200"
                     >
                       <motion.div
-                        className="shrink-0 w-12 h-12 rounded-xl bg-[#d9fea4]/40 dark:bg-[#ccef4d]/10 border border-[#c6f584]/60 dark:border-[#ccef4d]/20 flex items-center justify-center group-hover:bg-[#d9fea4] dark:group-hover:bg-[#ccef4d] transition-colors"
+                        className="shrink-0 w-12 h-12 rounded-xl bg-[#d9fea4]/40 border border-[#c6f584]/60 flex items-center justify-center group-hover:bg-[#d9fea4] transition-colors"
                         whileHover={{ rotate: 5, scale: 1.1 }}
                         transition={{ type: "spring", stiffness: 400, damping: 15 }}
                       >
-                        <Icon className="w-5 h-5 text-[#27322a] dark:text-[#ccef4d] group-hover:text-[#27322a] dark:group-hover:text-slate-950 transition-colors" />
+                        <Icon className="w-5 h-5 text-[#27322a] group-hover:text-[#27322a] transition-colors" />
                       </motion.div>
                       <div className="flex-1 min-w-0">
                         <p className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 mb-0.5">
                           {item.label}
                         </p>
-                        <p className="font-semibold text-[#090b09] dark:text-white truncate group-hover:text-[#27322a] dark:group-hover:text-[#ccef4d] transition-colors">
+                        <p className="font-semibold text-[#090b09] truncate group-hover:text-[#27322a] transition-colors">
                           {item.value}
                         </p>
-                        <p className="text-xs text-[#525854] dark:text-slate-400 mt-0.5">
+                        <p className="text-xs text-[#525854] mt-0.5">
                           {item.description}
                         </p>
                       </div>
@@ -163,7 +163,7 @@ export default function Contact() {
                         whileHover={{ x: 2, y: -2 }}
                         transition={{ type: "spring", stiffness: 400 }}
                       >
-                        <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-[#27322a] dark:group-hover:text-[#ccef4d] transition-colors shrink-0" />
+                        <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-[#27322a] transition-colors shrink-0" />
                       </motion.div>
                     </motion.a>
                   );
@@ -171,7 +171,7 @@ export default function Contact() {
               </div>
 
               {/* Socials */}
-              <div className="mt-12 pt-10 border-t border-[#e2e6e2] dark:border-[#252525]">
+              <div className="mt-12 pt-10 border-t border-[#e2e6e2]">
                 <p className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 mb-5">
                   Find me on
                 </p>
@@ -191,7 +191,7 @@ export default function Contact() {
                         transition={{ delay: i * 0.1, type: "spring", stiffness: 300, damping: 18 }}
                         whileHover={{ scale: 1.15, y: -3 }}
                         whileTap={{ scale: 0.9 }}
-                        className="w-11 h-11 rounded-xl bg-white dark:bg-[#161616] border border-[#e2e6e2] dark:border-[#252525] flex items-center justify-center text-slate-700 dark:text-slate-400 hover:border-[#27322a] hover:text-[#27322a] hover:bg-[#d9fea4]/30 dark:hover:border-[#ccef4d]/50 dark:hover:text-[#ccef4d] dark:hover:bg-[#ccef4d]/10 shadow-xs transition-colors duration-200"
+                        className="w-11 h-11 rounded-xl bg-white border border-[#e2e6e2] flex items-center justify-center text-slate-700 hover:border-[#27322a] hover:text-[#27322a] hover:bg-[#d9fea4]/30 shadow-xs transition-colors duration-200"
                       >
                         <Icon className="w-4 h-4" />
                       </motion.a>
@@ -207,22 +207,22 @@ export default function Contact() {
               <motion.div
                 whileHover={{ y: -4, boxShadow: "0 16px 40px rgba(39,50,42,0.10)" }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                className="p-6 rounded-2xl bg-white dark:bg-[#161616]/80 border border-[#e2e6e2] dark:border-[#252525] shadow-xs"
+                className="p-6 rounded-2xl bg-white border border-[#e2e6e2] shadow-xs"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span className="relative flex h-3 w-3">
                     <motion.span
-                      className="absolute inline-flex h-full w-full rounded-full bg-[#27322a] dark:bg-[#ccef4d] opacity-75"
+                      className="absolute inline-flex h-full w-full rounded-full bg-[#27322a] opacity-75"
                       animate={{ scale: [1, 2, 1], opacity: [0.75, 0, 0.75] }}
                       transition={{ duration: 1.8, repeat: Infinity, ease: "easeOut" }}
                     />
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-[#27322a] dark:bg-[#ccef4d]" />
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-[#27322a]" />
                   </span>
-                  <span className="text-sm font-bold text-[#27322a] dark:text-[#ccef4d] font-mono">
+                  <span className="text-sm font-bold text-[#27322a] font-mono">
                     Available for new projects &amp; roles
                   </span>
                 </div>
-                <p className="text-[#525854] dark:text-slate-400 text-sm leading-relaxed">
+                <p className="text-[#525854] text-sm leading-relaxed">
                   I'm currently open to freelance work, full-time roles, and
                   consulting engagements. If you have a project that needs
                   expertise in full-stack architecture — let's talk.
@@ -233,9 +233,9 @@ export default function Contact() {
               <motion.div
                 whileHover={{ y: -4, boxShadow: "0 16px 40px rgba(39,50,42,0.10)" }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                className="p-6 rounded-2xl bg-white dark:bg-[#161616]/80 border border-[#e2e6e2] dark:border-[#252525] shadow-xs"
+                className="p-6 rounded-2xl bg-white border border-[#e2e6e2] shadow-xs"
               >
-                <h3 className="font-bold text-[#090b09] dark:text-white mb-5 text-lg">
+                <h3 className="font-bold text-[#090b09] mb-5 text-lg">
                   What I can help with
                 </h3>
                 <ul className="space-y-3">
@@ -249,7 +249,7 @@ export default function Contact() {
                   ].map((item, i) => (
                     <motion.li
                       key={i}
-                      className="flex items-start gap-3 text-sm text-[#525854] dark:text-slate-300"
+                      className="flex items-start gap-3 text-sm text-[#525854]"
                       initial={{ opacity: 0, x: -12 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -257,7 +257,7 @@ export default function Contact() {
                       whileHover={{ x: 3 }}
                     >
                       <motion.span
-                        className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#27322a] dark:bg-[#ccef4d] shrink-0"
+                        className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#27322a] shrink-0"
                         whileHover={{ scale: 2 }}
                         transition={{ type: "spring", stiffness: 400 }}
                       />

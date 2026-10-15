@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import Link from "next/link";
-import { motion, useSpring, useTransform, useMotionValue } from "framer-motion";
+import { motion, useSpring, useMotionValue } from "framer-motion";
 import { useRef } from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -16,11 +16,11 @@ const baseClass =
 
 const variantClasses = {
   primary:
-    "bg-[#d9fea4] text-[#27322a] border border-[#c6f584] shadow-md shadow-[#d9fea4]/25 dark:bg-[#ccef4d] dark:text-slate-950 dark:border-transparent dark:shadow-[#ccef4d]/20",
+    "bg-[#d9fea4] text-[#27322a] border border-[#c6f584] shadow-md shadow-[#d9fea4]/25",
   secondary:
-    "bg-[#27322a] text-white border border-[#27322a] dark:bg-[#161616] dark:text-white dark:border-[#2e3846]",
+    "bg-[#27322a] text-white border border-[#27322a]",
   outline:
-    "border border-[#27322a] text-[#27322a] dark:border-[#ccef4d]/40 dark:text-[#ccef4d]",
+    "border border-[#27322a] text-[#27322a]",
 };
 
 const sizeClasses = {
@@ -75,11 +75,11 @@ export function Button({
         variantClasses[variant ?? "primary"],
         sizeClasses[size ?? "md"],
         variant === "primary" &&
-          "hover:bg-[#c6f584] hover:shadow-lg hover:shadow-[#d9fea4]/45 dark:hover:bg-[#bce436] dark:hover:shadow-[#ccef4d]/40",
+          "hover:bg-[#c6f584] hover:shadow-lg hover:shadow-[#d9fea4]/45",
         variant === "secondary" &&
-          "hover:bg-[#1e2620] dark:hover:bg-[#1f2937] dark:hover:border-[#ccef4d]/40",
+          "hover:bg-[#1e2620]",
         variant === "outline" &&
-          "hover:bg-[#d9fea4]/30 dark:hover:bg-[#ccef4d]/10",
+          "hover:bg-[#d9fea4]/30",
         className
       )}
       {...(props as React.ComponentProps<typeof motion.button>)}
@@ -150,11 +150,11 @@ export function LinkButton({
           variantClasses[variant ?? "primary"],
           sizeClasses[size ?? "md"],
           variant === "primary" &&
-            "hover:bg-[#c6f584] hover:shadow-lg hover:shadow-[#d9fea4]/45 dark:hover:bg-[#bce436] dark:hover:shadow-[#ccef4d]/40",
+            "hover:bg-[#c6f584] hover:shadow-lg hover:shadow-[#d9fea4]/45",
           variant === "secondary" &&
-            "hover:bg-[#1e2620] dark:hover:bg-[#1f2937] dark:hover:border-[#ccef4d]/40",
+            "hover:bg-[#1e2620]",
           variant === "outline" &&
-            "hover:bg-[#d9fea4]/30 dark:hover:bg-[#ccef4d]/10",
+            "hover:bg-[#d9fea4]/30",
           className
         )}
         {...props}

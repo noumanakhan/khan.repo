@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function WorkPage() {
   return (
-    <div className="min-h-screen bg-[#f4f6f4] dark:bg-[#0d0d0d] transition-colors duration-200">
+    <div className="min-h-screen bg-[#f4f6f4]">
       <WorkSection />
     </div>
   );

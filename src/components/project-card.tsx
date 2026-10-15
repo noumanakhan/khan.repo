@@ -61,7 +61,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
         whileHover={{ scale: 1.02 }}
         transition={{ type: "spring", stiffness: 300, damping: 25 }}
-        className="h-full rounded-2xl overflow-hidden border border-[#e2e6e2] dark:border-slate-700/50 bg-white dark:bg-slate-800/40 backdrop-blur-xl shadow-sm hover:shadow-2xl hover:shadow-[#d9fea4]/20 dark:hover:shadow-[#ccef4d]/15 flex flex-col relative"
+        className="h-full rounded-2xl overflow-hidden border border-[#e2e6e2] bg-white backdrop-blur-xl shadow-sm hover:shadow-2xl hover:shadow-[#d9fea4]/20 flex flex-col relative"
       >
         {/* Dynamic gradient glow that follows cursor */}
         <motion.div
@@ -72,7 +72,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
         />
 
         {/* Image Section */}
-        <div className="relative h-56 bg-gradient-to-br from-[#f4f6f4] to-slate-200 dark:from-slate-800 dark:to-slate-900 overflow-hidden z-10">
+        <div className="relative h-56 bg-gradient-to-br from-[#f4f6f4] to-slate-200 overflow-hidden z-10">
           <motion.div
             className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10"
             initial={{ opacity: 0 }}
@@ -80,7 +80,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
             transition={{ duration: 0.3 }}
           />
           <motion.div
-            className="w-full h-full flex items-center justify-center text-6xl font-bold text-slate-700 dark:text-slate-400"
+            className="w-full h-full flex items-center justify-center text-6xl font-bold text-slate-700"
             whileHover={{ scale: 1.15 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
@@ -95,7 +95,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           {/* Category Badge */}
           <div className="mb-3">
             <motion.span
-              className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-[#d9fea4]/40 dark:bg-[#ccef4d]/10 text-[#27322a] dark:text-[#ccef4d] uppercase tracking-wide border border-[#c6f584]/60 dark:border-[#ccef4d]/20"
+              className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-[#d9fea4]/40 text-[#27322a] uppercase tracking-wide border border-[#c6f584]/60"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
@@ -104,12 +104,12 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           </div>
 
           {/* Title */}
-          <h3 className="text-lg font-bold text-[#090b09] dark:text-white mb-2 line-clamp-2 group-hover:text-[#27322a] dark:group-hover:text-[#ccef4d] transition-colors duration-300">
+          <h3 className="text-lg font-bold text-[#090b09] mb-2 line-clamp-2 group-hover:text-[#27322a] transition-colors duration-300">
             {project.title}
           </h3>
 
           {/* Description */}
-          <p className="text-sm text-[#525854] dark:text-slate-400 mb-4 line-clamp-2">
+          <p className="text-sm text-[#525854] mb-4 line-clamp-2">
             {project.description}
           </p>
 
@@ -123,20 +123,20 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 + ti * 0.05 }}
                 whileHover={{ scale: 1.1, y: -1 }}
-                className="px-2 py-1 text-xs rounded bg-[#f4f6f4] dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-[#e2e6e2] dark:border-transparent cursor-default"
+                className="px-2 py-1 text-xs rounded bg-[#f4f6f4] text-slate-700 border border-[#e2e6e2] cursor-default"
               >
                 {tech}
               </motion.span>
             ))}
             {project.tech.length > 4 && (
-              <span className="px-2 py-1 text-xs rounded bg-[#f4f6f4] dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-[#e2e6e2] dark:border-transparent">
+              <span className="px-2 py-1 text-xs rounded bg-[#f4f6f4] text-slate-500 border border-[#e2e6e2]">
                 +{project.tech.length - 4}
               </span>
             )}
           </div>
 
           {/* Links */}
-          <div className="flex gap-3 pt-4 border-t border-[#e2e6e2] dark:border-slate-800 mt-auto">
+          <div className="flex gap-3 pt-4 border-t border-[#e2e6e2] mt-auto">
             <motion.a
               href={project.githubUrl}
               target="_blank"
@@ -144,7 +144,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
               whileHover={{ scale: 1.04, y: -1 }}
               whileTap={{ scale: 0.96 }}
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
-              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-[#f4f6f4] dark:bg-slate-800 text-[#090b09] dark:text-slate-300 hover:bg-[#e5e8e5] dark:hover:bg-slate-700 transition-colors text-sm font-medium border border-[#e2e6e2] dark:border-transparent"
+              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-[#f4f6f4] text-[#090b09] hover:bg-[#e5e8e5] transition-colors text-sm font-medium border border-[#e2e6e2]"
             >
               <Code2 className="w-4 h-4" />
               Code
@@ -157,7 +157,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                 whileHover={{ scale: 1.04, y: -1 }}
                 whileTap={{ scale: 0.96 }}
                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-[#d9fea4] hover:bg-[#c6f584] text-[#27322a] dark:bg-[#ccef4d] dark:hover:bg-[#bce436] dark:text-slate-950 transition-colors text-sm font-bold border border-[#c6f584]/60 dark:border-transparent shadow-sm hover:shadow-md hover:shadow-[#d9fea4]/30"
+                className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-[#d9fea4] hover:bg-[#c6f584] text-[#27322a] transition-colors text-sm font-bold border border-[#c6f584]/60 shadow-sm hover:shadow-md hover:shadow-[#d9fea4]/30"
               >
                 <ExternalLink className="w-4 h-4" />
                 Live

@@ -29,14 +29,14 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   if (!project) notFound();
 
   return (
-    <div className="min-h-screen bg-[#f4f6f4] dark:bg-[#0d0d0d] text-[#090b09] dark:text-slate-100 transition-colors duration-200">
+    <div className="min-h-screen bg-[#f4f6f4] text-[#090b09]">
       {/* Hero Header */}
-      <section className="pt-28 pb-12 bg-[#27322a] dark:bg-[#0d0d0d] border-b border-[#3a473e] dark:border-[#252525] text-white transition-colors duration-200">
+      <section className="pt-28 pb-12 bg-[#27322a] border-b border-[#3a473e] text-white">
         <Container>
           <div className="mx-auto max-w-4xl">
             <Link
               href="/work"
-              className="group mb-8 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-slate-300 dark:text-slate-400 hover:text-[#d9fea4] dark:hover:text-[#ccef4d] transition-colors"
+              className="group mb-8 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-slate-300 hover:text-[#d9fea4] transition-colors"
             >
               <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
               Back to work
@@ -44,17 +44,17 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
-                <span className="rounded bg-[#3a473e] dark:bg-[#ccef4d]/10 px-2.5 py-0.5 font-mono text-xs font-bold text-[#d9fea4] dark:text-[#ccef4d] border border-[#4d5e52] dark:border-[#ccef4d]/30">
+                <span className="rounded bg-[#3a473e] px-2.5 py-0.5 font-mono text-xs font-bold text-[#d9fea4] border border-[#4d5e52]">
                   {project.index}
                 </span>
-                <span className="font-mono text-xs text-[#a0ada3] dark:text-slate-400 uppercase tracking-wider">
+                <span className="font-mono text-xs text-[#a0ada3] uppercase tracking-wider">
                   Case Study
                 </span>
               </div>
               <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
                 {project.fullTitle}
               </h1>
-              <p className="max-w-2xl text-lg text-[#c5cec7] dark:text-slate-400 leading-relaxed">
+              <p className="max-w-2xl text-lg text-[#c5cec7] leading-relaxed">
                 {project.tagline}
               </p>
             </div>
@@ -65,7 +65,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[#d9fea4] hover:bg-[#c6f584] px-6 py-3
-                           text-sm font-bold text-[#27322a] border border-[#c6f584] shadow-md shadow-[#d9fea4]/25 transition-all dark:bg-[#ccef4d] dark:hover:bg-[#bce436] dark:text-slate-950 dark:shadow-[#ccef4d]/20 w-fit cursor-pointer"
+                           text-sm font-bold text-[#27322a] border border-[#c6f584] shadow-md shadow-[#d9fea4]/25 transition-all w-fit cursor-pointer"
               >
                 <span>Live Demo</span>
                 <ExternalLink className="h-4 w-4" />
@@ -73,16 +73,16 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
               {/* Demo Credentials */}
               {project.credentials && (
-                <div className="flex flex-wrap gap-x-5 gap-y-1 font-mono text-xs text-[#a0ada3] dark:text-slate-400">
+                <div className="flex flex-wrap gap-x-5 gap-y-1 font-mono text-xs text-[#a0ada3]">
                   {project.credentials.login && (
                     <span>
                       <span>login :</span>{" "}
-                      <span className="text-white dark:text-slate-200 font-semibold">{project.credentials.login}</span>
+                      <span className="text-white font-semibold">{project.credentials.login}</span>
                     </span>
                   )}
                   <span>
                     <span>password :</span>{" "}
-                    <span className="text-white dark:text-slate-200 font-semibold">{project.credentials.password}</span>
+                    <span className="text-white font-semibold">{project.credentials.password}</span>
                   </span>
                 </div>
               )}
@@ -105,10 +105,10 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             </div>
 
             {/* Tech Stack — placed above About the Project */}
-            <section className="mt-14 space-y-4 rounded-2xl border border-[#e2e6e2] dark:border-[#252525] bg-white dark:bg-[#161616]/80 p-6 md:p-8 shadow-xs">
-              <div className="flex items-center gap-2 border-b border-[#e2e6e2] dark:border-[#252525] pb-3">
-                <Code className="h-4 w-4 text-[#27322a] dark:text-[#ccef4d]" />
-                <h2 className="font-mono text-xs uppercase tracking-widest text-[#090b09] dark:text-slate-400 font-bold">
+            <section className="mt-14 space-y-4 rounded-2xl border border-[#e2e6e2] bg-white p-6 md:p-8 shadow-xs">
+              <div className="flex items-center gap-2 border-b border-[#e2e6e2] pb-3">
+                <Code className="h-4 w-4 text-[#27322a]" />
+                <h2 className="font-mono text-xs uppercase tracking-widest text-[#090b09] font-bold">
                   Technologies &amp; Stack
                 </h2>
               </div>
@@ -116,7 +116,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 {project.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-lg border border-[#e2e6e2] dark:border-[#252525] bg-[#f4f6f4] dark:bg-[#0d0d0d] px-3 py-1.5 font-mono text-xs font-medium text-slate-800 dark:text-slate-200"
+                    className="rounded-lg border border-[#e2e6e2] bg-[#f4f6f4] px-3 py-1.5 font-mono text-xs font-medium text-slate-800"
                   >
                     {tech}
                   </span>
@@ -125,10 +125,10 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             </section>
 
             {/* Project Details / Description — below Tech Stack */}
-            <section className="mt-8 space-y-4 rounded-2xl border border-[#e2e6e2] dark:border-[#252525] bg-white dark:bg-[#161616]/80 p-6 md:p-8 shadow-xs">
-              <div className="flex items-center gap-2 border-b border-[#e2e6e2] dark:border-[#252525] pb-3">
-                <Layers className="h-4 w-4 text-[#27322a] dark:text-[#ccef4d]" />
-                <h2 className="font-mono text-xs uppercase tracking-widest text-[#090b09] dark:text-slate-400 font-bold">
+            <section className="mt-8 space-y-4 rounded-2xl border border-[#e2e6e2] bg-white p-6 md:p-8 shadow-xs">
+              <div className="flex items-center gap-2 border-b border-[#e2e6e2] pb-3">
+                <Layers className="h-4 w-4 text-[#27322a]" />
+                <h2 className="font-mono text-xs uppercase tracking-widest text-[#090b09] font-bold">
                   About the Project
                 </h2>
               </div>
@@ -141,11 +141,11 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                     const bullets = lines.slice(1);
                     return (
                       <div key={i} className="pt-2">
-                        <p className="font-semibold text-[#090b09] dark:text-slate-200 mb-2">{heading}</p>
+                        <p className="font-semibold text-[#090b09] mb-2">{heading}</p>
                         <ul className="space-y-1.5 pl-1">
                           {bullets.map((bullet, j) => (
-                            <li key={j} className="flex items-start gap-2 text-[#525854] dark:text-slate-300 text-sm leading-relaxed">
-                              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#27322a] dark:bg-[#ccef4d]" />
+                            <li key={j} className="flex items-start gap-2 text-[#525854] text-sm leading-relaxed">
+                              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#27322a]" />
                               <span>{bullet.replace(/^•\s*/, "")}</span>
                             </li>
                           ))}
@@ -154,7 +154,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                     );
                   }
                   return (
-                    <p key={i} className="leading-relaxed text-[#525854] dark:text-slate-300 text-base">
+                    <p key={i} className="leading-relaxed text-[#525854] text-base">
                       {paragraph}
                     </p>
                   );

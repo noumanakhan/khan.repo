@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Container } from "@/components/container";
 import { LinkButton } from "@/components/button";
-import { ChevronDown, Code2, Briefcase, Mail } from "lucide-react";
+import { ChevronDown, Mail } from "lucide-react";
 import Image from "next/image";
 import dp from "./dp.jpeg";
 
@@ -58,11 +58,11 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-[#27322a] dark:bg-[#0d0d0d] pt-24 pb-16 lg:py-0 transition-colors duration-300">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-[#27322a] pt-24 pb-16 lg:py-0">
         {/* Animated Ambient Glows */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <motion.div
-            className="absolute top-20 left-10 w-96 h-96 bg-[#d9fea4] dark:bg-[#ccef4d] rounded-full mix-blend-screen filter blur-[140px] opacity-[0.10] dark:opacity-[0.07]"
+            className="absolute top-20 left-10 w-96 h-96 bg-[#d9fea4] rounded-full mix-blend-screen filter blur-[140px] opacity-[0.10]"
             animate={{
               x: [0, 30, -20, 0],
               y: [0, -50, 20, 0],
@@ -71,7 +71,7 @@ export default function Home() {
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.div
-            className="absolute bottom-20 left-1/4 w-96 h-96 bg-[#c6f584] rounded-full mix-blend-screen filter blur-[140px] opacity-[0.07] dark:opacity-[0.05]"
+            className="absolute bottom-20 left-1/4 w-96 h-96 bg-[#c6f584] rounded-full mix-blend-screen filter blur-[140px] opacity-[0.07]"
             animate={{
               x: [0, -30, 20, 0],
               y: [0, 40, -30, 0],
@@ -93,7 +93,7 @@ export default function Home() {
               {/* Mobile profile */}
               <motion.div variants={itemVariants} className="flex justify-center mb-6 lg:hidden">
                 <motion.div
-                  className="relative w-32 h-32 rounded-full overflow-hidden ring-4 ring-[#d9fea4]/60 dark:ring-[#ccef4d]/40 ring-offset-4 ring-offset-[#27322a] dark:ring-offset-[#0d0d0d] shadow-2xl shadow-[#d9fea4]/25 dark:shadow-[#ccef4d]/20"
+                  className="relative w-32 h-32 rounded-full overflow-hidden ring-4 ring-[#d9fea4]/60 ring-offset-4 ring-offset-[#27322a] shadow-2xl shadow-[#d9fea4]/25"
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
                 >
@@ -104,7 +104,7 @@ export default function Home() {
               {/* Badge */}
               <motion.div variants={itemVariants} className="mb-4 text-center lg:text-left">
                 <motion.span
-                  className="inline-block rounded-full bg-[#3a473e] dark:bg-[#ccef4d]/10 px-3.5 py-1 text-xs font-mono font-bold uppercase tracking-widest text-[#d9fea4] dark:text-[#ccef4d] border border-[#4d5e52] dark:border-[#ccef4d]/30"
+                  className="inline-block rounded-full bg-[#3a473e] px-3.5 py-1 text-xs font-mono font-bold uppercase tracking-widest text-[#d9fea4] border border-[#4d5e52]"
                   whileHover={{ scale: 1.04, boxShadow: "0 0 20px rgba(217,254,164,0.2)" }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
@@ -119,7 +119,7 @@ export default function Home() {
               >
                 Hi, I'm <br />
                 <motion.span
-                  className="text-[#d9fea4] dark:text-[#ccef4d] inline-block"
+                  className="text-[#d9fea4] inline-block"
                   animate={{ opacity: [0.85, 1, 0.85] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
@@ -130,7 +130,7 @@ export default function Home() {
               {/* Subtitle */}
               <motion.p
                 variants={itemVariants}
-                className="text-lg sm:text-xl text-[#c5cec7] dark:text-slate-400 mb-8 leading-relaxed text-center lg:text-left"
+                className="text-lg sm:text-xl text-[#c5cec7] mb-8 leading-relaxed text-center lg:text-left"
               >
                 Full Stack AI Engineer focused on building scalable, secure, and high-performance applications. Experienced in end-to-end development, clean architecture, and integrating AI-powered solutions.
               </motion.p>
@@ -159,7 +159,7 @@ export default function Home() {
                   animate={{ y: [0, 10, 0] }}
                   transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <ChevronDown className="w-6 h-6 text-[#d9fea4] dark:text-[#ccef4d]" />
+                  <ChevronDown className="w-6 h-6 text-[#d9fea4]" />
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -174,9 +174,9 @@ export default function Home() {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-full p-2 bg-gradient-to-tr from-[#d9fea4] via-[#d9fea4]/40 to-transparent dark:from-[#ccef4d] dark:via-[#a3e635]/30 shadow-2xl shadow-[#d9fea4]/20 dark:shadow-[#ccef4d]/20"
+                className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-full p-2 bg-gradient-to-tr from-[#d9fea4] via-[#d9fea4]/40 to-transparent shadow-2xl shadow-[#d9fea4]/20"
               >
-                <div className="relative w-full h-full rounded-full overflow-hidden ring-4 ring-[#27322a] dark:ring-[#0d0d0d]">
+                <div className="relative w-full h-full rounded-full overflow-hidden ring-4 ring-[#27322a]">
                   <Image src={dp} alt="Nouman A Khan" fill className="object-cover object-top" priority />
                 </div>
               </motion.div>
@@ -219,7 +219,7 @@ export default function Home() {
                     transition={{ delay: 0.6 + i * 0.1, duration: 0.5, ease: "easeOut" }}
                     whileHover={{ scale: 1.15, y: -3, boxShadow: "0 8px 24px rgba(217,254,164,0.25)" }}
                     whileTap={{ scale: 0.92 }}
-                    className="p-3 rounded-full bg-[#344237] dark:bg-[#161616] border border-[#445649] dark:border-[#252525] text-slate-200 dark:text-slate-300 hover:bg-[#d9fea4] hover:text-[#27322a] hover:border-[#d9fea4] dark:hover:bg-[#ccef4d]/10 dark:hover:text-[#ccef4d] dark:hover:border-[#ccef4d]/40 transition-colors duration-200 shadow-sm"
+                    className="p-3 rounded-full bg-[#344237] border border-[#445649] text-slate-200 hover:bg-[#d9fea4] hover:text-[#27322a] hover:border-[#d9fea4] transition-colors duration-200 shadow-sm"
                   >
                     {social.icon}
                   </motion.a>
@@ -231,13 +231,13 @@ export default function Home() {
       </section>
 
       {/* 1. Statement Section */}
-      <section className="py-24 bg-white dark:bg-[#0d0d0d] border-t border-[#e2e6e2] dark:border-[#252525] transition-colors duration-300 overflow-hidden">
+      <section className="py-24 bg-white border-t border-[#e2e6e2] overflow-hidden">
         <Container>
           <FadeUp className="text-center max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight text-[#090b09] dark:text-white leading-tight">
+            <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight text-[#090b09] leading-tight">
               I build things <br />
               <motion.span
-                className="text-[#090b09] dark:text-[#ccef4d] bg-[#d9fea4]/40 dark:bg-transparent px-2.5 py-0.5 rounded-lg border border-[#c6f584]/50 dark:border-transparent inline-block"
+                className="text-[#090b09] bg-[#d9fea4]/40 px-2.5 py-0.5 rounded-lg border border-[#c6f584]/50 inline-block"
                 whileHover={{ scale: 1.03, boxShadow: "0 4px 20px rgba(217,254,164,0.3)" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -251,21 +251,21 @@ export default function Home() {
       </section>
 
       {/* 2. Watch before you book Section */}
-      <section className="py-24 bg-[#f4f6f4] dark:bg-[#0a0a0a] transition-colors duration-300">
+      <section className="py-24 bg-[#f4f6f4]">
         <Container>
           <div className="max-w-4xl mx-auto">
             <FadeUp>
               <motion.div
                 whileHover={{ y: -4, boxShadow: "0 24px 60px rgba(39,50,42,0.12)" }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                className="bg-white dark:bg-[#161616] rounded-3xl p-8 md:p-12 border border-[#e2e6e2] dark:border-[#252525] shadow-sm"
+                className="bg-white rounded-3xl p-8 md:p-12 border border-[#e2e6e2] shadow-sm"
               >
-                <h2 className="text-3xl font-bold mb-4 text-[#090b09] dark:text-white">Watch before you book</h2>
-                <p className="text-xl text-[#525854] dark:text-slate-400 mb-8 font-medium">How I think about building products.</p>
+                <h2 className="text-3xl font-bold mb-4 text-[#090b09]">Watch before you book</h2>
+                <p className="text-xl text-[#525854] mb-8 font-medium">How I think about building products.</p>
 
-                <div className="bg-[#f8f9fa] dark:bg-[#0d0d0d] rounded-2xl p-6 mb-8 border border-[#e2e6e2] dark:border-[#252525]">
-                  <p className="text-[#090b09] dark:text-slate-300 mb-4 font-medium">A 90-second breakdown of how I approach MVPs, what kills most product builds before they ship, and what I do differently.</p>
-                  <ul className="space-y-3 text-[#525854] dark:text-slate-400">
+                <div className="bg-[#f8f9fa] rounded-2xl p-6 mb-8 border border-[#e2e6e2]">
+                  <p className="text-[#090b09] mb-4 font-medium">A 90-second breakdown of how I approach MVPs, what kills most product builds before they ship, and what I do differently.</p>
+                  <ul className="space-y-3 text-[#525854]">
                     {[
                       "Why most MVPs fail before launch",
                       "What I scope before writing a line of code",
@@ -279,7 +279,7 @@ export default function Home() {
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.1, duration: 0.4, ease: "easeOut" }}
                       >
-                        <span className="text-[#27322a] dark:text-[#ccef4d] font-bold">✓</span>
+                        <span className="text-[#27322a] font-bold">✓</span>
                         {item}
                       </motion.li>
                     ))}
@@ -293,7 +293,7 @@ export default function Home() {
                   whileHover={{ scale: 1.04, boxShadow: "0 12px 32px rgba(217,254,164,0.4)" }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: "spring", stiffness: 350, damping: 20 }}
-                  className="inline-block px-8 py-4 bg-[#d9fea4] hover:bg-[#c6f584] text-[#27322a] dark:bg-[#ccef4d] dark:hover:bg-[#bce436] dark:text-slate-950 rounded-full font-bold text-lg transition-colors shadow-md shadow-[#d9fea4]/25 dark:shadow-[#ccef4d]/20 w-full sm:w-auto text-center border border-[#c6f584]/60 dark:border-transparent cursor-pointer"
+                  className="inline-block px-8 py-4 bg-[#d9fea4] hover:bg-[#c6f584] text-[#27322a] rounded-full font-bold text-lg transition-colors shadow-md shadow-[#d9fea4]/25 w-full sm:w-auto text-center border border-[#c6f584]/60 cursor-pointer"
                 >
                   Book a free 20-min call
                 </motion.a>
@@ -304,22 +304,22 @@ export default function Home() {
       </section>
 
       {/* 3. Way to work with me Section */}
-      <section id="work" className="py-24 bg-white dark:bg-[#0d0d0d] border-t border-[#e2e6e2] dark:border-[#252525] transition-colors duration-300">
+      <section id="work" className="py-24 bg-white border-t border-[#e2e6e2]">
         <Container>
           <div className="max-w-4xl mx-auto">
             <FadeUp className="mb-16 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#090b09] dark:text-white">Way to work with me.</h2>
-              <p className="text-lg text-[#525854] dark:text-slate-400 leading-relaxed">Every engagement is led by me personally.</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#090b09]">Way to work with me.</h2>
+              <p className="text-lg text-[#525854] leading-relaxed">Every engagement is led by me personally.</p>
             </FadeUp>
 
             <FadeUp delay={0.1}>
               <motion.div
                 whileHover={{ y: -4, boxShadow: "0 24px 60px rgba(39,50,42,0.10)" }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                className="bg-[#f4f6f4] dark:bg-[#161616] rounded-3xl p-8 md:p-12 border border-[#e2e6e2] dark:border-[#252525] shadow-xs"
+                className="bg-[#f4f6f4] rounded-3xl p-8 md:p-12 border border-[#e2e6e2] shadow-xs"
               >
-                <h3 className="text-2xl font-bold mb-4 text-[#090b09] dark:text-white">You have an idea. Let's build it.</h3>
-                <p className="text-[#525854] dark:text-slate-400 mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-[#090b09]">You have an idea. Let's build it.</h3>
+                <p className="text-[#525854] mb-8">
                   From scoped architecture to deployed product. Fixed price, fixed timeline. No hourly billing, no scope creep, no surprises.
                 </p>
 
@@ -341,20 +341,20 @@ export default function Home() {
                       transition={{ delay: i * 0.08, duration: 0.4, ease: "easeOut" }}
                     >
                       <motion.span
-                        className="text-[#27322a] dark:text-[#ccef4d] mt-1 font-bold"
+                        className="text-[#27322a] mt-1 font-bold"
                         animate={{ rotate: [0, 5, -5, 0] }}
                         transition={{ duration: 3, repeat: Infinity, delay: i * 0.3 }}
                       >
                         ✦
                       </motion.span>
-                      <span className="text-[#090b09] dark:text-slate-300 font-medium">{item}</span>
+                      <span className="text-[#090b09] font-medium">{item}</span>
                     </motion.div>
                   ))}
                 </div>
 
-                <div className="pt-8 border-t border-[#e2e6e2] dark:border-[#252525]">
-                  <p className="text-xl font-bold text-[#090b09] dark:text-white">
-                    From $3500 <span className="text-[#525854] dark:text-slate-400 font-normal">· Delivered in 4 to 8 weeks</span>
+                <div className="pt-8 border-t border-[#e2e6e2]">
+                  <p className="text-xl font-bold text-[#090b09]">
+                    From $3500 <span className="text-[#525854] font-normal">· Delivered in 4 to 8 weeks</span>
                   </p>
                 </div>
               </motion.div>
@@ -364,10 +364,10 @@ export default function Home() {
       </section>
 
       {/* 5. Bento Grid — beliefs */}
-      <section className="py-24 bg-[#f4f6f4] dark:bg-[#0a0a0a] transition-colors duration-300">
+      <section className="py-24 bg-[#f4f6f4]">
         <Container>
           <FadeUp className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-[#090b09] dark:text-white">What I believe about building.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-[#090b09]">What I believe about building.</h2>
           </FadeUp>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -391,12 +391,12 @@ export default function Home() {
                   transition={{ type: "spring", stiffness: 250, damping: 22 }}
                   className={`p-10 rounded-3xl border shadow-md transition-shadow hover:shadow-xl ${
                     card.dark
-                      ? "bg-[#27322a] dark:bg-[#161616] border-[#3a473e] dark:border-[#252525] hover:border-[#d9fea4]/50 dark:hover:border-[#ccef4d]/40 hover:shadow-[#d9fea4]/10 dark:hover:shadow-[#ccef4d]/5"
-                      : "bg-[#d9fea4] dark:bg-[#18231c] border-[#c6f584] dark:border-[#2e3e33] hover:border-[#27322a]/40 dark:hover:border-[#ccef4d]/40"
+                      ? "bg-[#27322a] border-[#3a473e] hover:border-[#d9fea4]/50 hover:shadow-[#d9fea4]/10"
+                      : "bg-[#d9fea4] border-[#c6f584] hover:border-[#27322a]/40"
                   }`}
                 >
                   <motion.div
-                    className={`text-5xl font-extrabold mb-6 ${card.dark ? "text-[#d9fea4] dark:text-[#ccef4d]/40" : "text-[#27322a]/40 dark:text-[#ccef4d]/40"}`}
+                    className={`text-5xl font-extrabold mb-6 ${card.dark ? "text-[#d9fea4]" : "text-[#27322a]/40"}`}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -404,10 +404,10 @@ export default function Home() {
                   >
                     {card.num}
                   </motion.div>
-                  <h3 className={`text-2xl font-bold mb-4 ${card.dark ? "text-white" : "text-[#27322a] dark:text-white"}`}>
+                  <h3 className={`text-2xl font-bold mb-4 ${card.dark ? "text-white" : "text-[#27322a]"}`}>
                     {card.title}
                   </h3>
-                  <p className={`leading-relaxed ${card.dark ? "text-[#c5cec7] dark:text-slate-400" : "text-[#27322a]/90 dark:text-slate-300 font-medium"}`}>
+                  <p className={`leading-relaxed ${card.dark ? "text-[#c5cec7]" : "text-[#27322a]/90 font-medium"}`}>
                     {card.body}
                   </p>
                 </motion.div>
@@ -418,10 +418,10 @@ export default function Home() {
       </section>
 
       {/* 6. From conversation to live product */}
-      <section className="py-24 bg-white dark:bg-[#0d0d0d] border-t border-[#e2e6e2] dark:border-[#252525] transition-colors duration-300">
+      <section className="py-24 bg-white border-t border-[#e2e6e2]">
         <Container>
           <FadeUp className="mb-16 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#090b09] dark:text-white">From conversation to live product.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#090b09]">From conversation to live product.</h2>
           </FadeUp>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -435,17 +435,17 @@ export default function Home() {
                 <motion.div
                   whileHover={{ y: -6, borderColor: "rgba(39,50,42,0.4)" }}
                   transition={{ type: "spring", stiffness: 250, damping: 22 }}
-                  className="flex flex-col bg-[#f4f6f4] dark:bg-[#161616] p-8 rounded-3xl border border-[#e2e6e2] dark:border-[#252525] dark:hover:border-[#ccef4d]/40 shadow-xs hover:shadow-xl hover:shadow-[#d9fea4]/10 dark:hover:shadow-[#ccef4d]/5 h-full"
+                  className="flex flex-col bg-[#f4f6f4] p-8 rounded-3xl border border-[#e2e6e2] shadow-xs hover:shadow-xl hover:shadow-[#d9fea4]/10 h-full"
                 >
                   <motion.div
-                    className="text-[#d9fea4] bg-[#27322a] px-3 py-1 rounded-full font-mono font-bold text-sm w-fit mb-4 dark:bg-transparent dark:text-[#ccef4d] dark:p-0 dark:text-xl"
+                    className="text-[#d9fea4] bg-[#27322a] px-3 py-1 rounded-full font-mono font-bold text-sm w-fit mb-4"
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400 }}
                   >
                     {step.num}
                   </motion.div>
-                  <h3 className="text-xl font-bold mb-3 text-[#090b09] dark:text-white">{step.title}</h3>
-                  <p className="text-[#525854] dark:text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  <h3 className="text-xl font-bold mb-3 text-[#090b09]">{step.title}</h3>
+                  <p className="text-[#525854] text-sm leading-relaxed">{step.desc}</p>
                 </motion.div>
               </FadeUp>
             ))}
@@ -460,7 +460,7 @@ export default function Home() {
             >
               <Link
                 href="/contact"
-                className="inline-block px-8 py-4 bg-[#d9fea4] text-[#27322a] dark:bg-[#ccef4d] dark:text-slate-950 rounded-full font-bold text-lg hover:bg-[#c6f584] dark:hover:bg-[#bce436] transition-colors shadow-lg shadow-[#d9fea4]/25 dark:shadow-[#ccef4d]/20 border border-[#c6f584]/60 dark:border-transparent"
+                className="inline-block px-8 py-4 bg-[#d9fea4] text-[#27322a] rounded-full font-bold text-lg hover:bg-[#c6f584] transition-colors shadow-lg shadow-[#d9fea4]/25 border border-[#c6f584]/60"
               >
                 Start the Conversation
               </Link>
@@ -470,7 +470,7 @@ export default function Home() {
       </section>
 
       {/* Results Section */}
-      <section className="py-24 bg-[#d9fea4] dark:bg-[#ccef4d] text-[#27322a] dark:text-slate-950 text-center transition-colors duration-300 overflow-hidden relative">
+      <section className="py-24 bg-[#d9fea4] text-[#27322a] text-center overflow-hidden relative">
         <motion.div
           className="absolute inset-0 -z-10"
           animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
@@ -478,8 +478,8 @@ export default function Home() {
         />
         <Container>
           <FadeUp className="max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-[#27322a] dark:text-slate-950">Results, not just deliverables.</h2>
-            <p className="text-xl text-[#27322a]/85 dark:text-slate-900 font-semibold leading-relaxed">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-[#27322a]">Results, not just deliverables.</h2>
+            <p className="text-xl text-[#27322a]/85 font-semibold leading-relaxed">
               I measure success by what happens after I build.
             </p>
           </FadeUp>

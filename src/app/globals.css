@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 :root {
   --background: #ffffff;
   --foreground: #090b09;
@@ -13,19 +11,6 @@
   --scrollbar-track: #f4f6f4;
   --scrollbar-thumb: #27322a;
   --scrollbar-thumb-hover: #1e2620;
-}
-
-.dark {
-  --background: #0d0d0d;
-  --foreground: #f8fafc;
-  --muted: #94a3b8;
-  --card: #161616;
-  --card-border: #252525;
-  --accent: #ccef4d;
-  --vaulta-hero: #0d0d0d;
-  --scrollbar-track: #0d0d0d;
-  --scrollbar-thumb: #252525;
-  --scrollbar-thumb-hover: #ccef4d;
 }
 
 @theme inline {
@@ -107,15 +92,6 @@ body {
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 20px rgba(217, 254, 164, 0.2); }
   50% { box-shadow: 0 0 40px rgba(217, 254, 164, 0.5); }
-}
-
-.dark .pulse-glow {
-  animation: pulse-glow-dark 2s ease-in-out infinite;
-}
-
-@keyframes pulse-glow-dark {
-  0%, 100% { box-shadow: 0 0 20px rgba(204, 239, 77, 0.15); }
-  50% { box-shadow: 0 0 40px rgba(204, 239, 77, 0.4); }
 }
 
 /* Gradient text animation */
