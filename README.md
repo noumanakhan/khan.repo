@@ -184,7 +184,7 @@ npm run build
 
 Built by **Nouman Khan** - Full Stack Developer
 
-- Email: hello.devkhan@gmail.com
+- Email: noumananjumkhan@gmail.com
 - GitHub: [github.com/noumanakhan](https://github.com/noumanakhan)
 - LinkedIn: [linkedin.com/in/noumanakhan](https://linkedin.com/in/noumanakhan)
 
